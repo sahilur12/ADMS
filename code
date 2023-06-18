@@ -1,0 +1,41 @@
+=> ALTER TABLE member 
+RENAME TO members;
+
+=> SELECT m_name
+FROM Member
+WHERE bill IN
+(SELECT max(bill)
+FROM Member);
+
+=> SELECT m_name 
+From Member
+ORDER BY bill ASC;
+
+=> SELECT m_name 
+FROM Member
+WHERE m_name LIKE "A%";
+
+SELECT t_name,specialty,m_name
+FROM Trainer
+WHERE t_id=3;
+
+=> SELECT m_name,m_address
+FROM Member
+JOIN Trainer
+ON Member.t_id = Trainer.t_id
+WHERE t_name = "Prioty"
+
+=> create view trainer_vw as select t_id,t_name,specialty
+from Trainer
+
+
+=> Select t_name,specialty
+FROM Trainer_vw;
+
+Create view  Info
+
+
+
+
+
+
